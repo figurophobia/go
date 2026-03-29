@@ -1,0 +1,27 @@
+[gd_scene load_steps=17 format=3 uid="uid://dxmw1n4jo1j4o"]
+
+[ext_resource type="Script" uid="uid://d1qnw3rke6qx0" path="res://scripts/stone.gd" id="1_i5bm8"]
+[ext_resource type="Texture2D" uid="uid://bi2uidr54rons" path="res://assets/stones/style_a/128x128/black_00.png" id="2_gpuve"]
+[ext_resource type="Texture2D" uid="uid://dio8ohp18t4h6" path="res://assets/stones/style_a/128x128/black_01.png" id="3_4o4bw"]
+[ext_resource type="Texture2D" uid="uid://baj1kvnkjndoy" path="res://assets/stones/style_a/128x128/black_02.png" id="4_jj8dd"]
+[ext_resource type="Texture2D" uid="uid://60h706vvt8rr" path="res://assets/stones/style_a/128x128/black_03.png" id="5_vnpbj"]
+[ext_resource type="Texture2D" uid="uid://cwc82dwjoo5ta" path="res://assets/stones/style_a/128x128/white_00.png" id="6_dvrlk"]
+[ext_resource type="Texture2D" uid="uid://rrchbdhf7yfo" path="res://assets/stones/style_a/128x128/white_01.png" id="7_62poc"]
+[ext_resource type="Texture2D" uid="uid://dyfqyyvuudjk5" path="res://assets/stones/style_a/128x128/white_02.png" id="8_kp0le"]
+[ext_resource type="Texture2D" uid="uid://dibsuf4ky3fri" path="res://assets/stones/style_a/128x128/white_03.png" id="9_vjd4v"]
+[ext_resource type="Texture2D" uid="uid://csyqqdmi8wbeh" path="res://assets/stones/style_a/128x128/white_04.png" id="10_up2ci"]
+[ext_resource type="Texture2D" uid="uid://dmu8x4g6aijob" path="res://assets/stones/style_a/128x128/white_05.png" id="11_gu6fy"]
+[ext_resource type="Texture2D" uid="uid://dxxyuhg7qdv3k" path="res://assets/stones/style_a/128x128/white_06.png" id="12_a1mu3"]
+[ext_resource type="Texture2D" uid="uid://cd3gjpeftjepj" path="res://assets/stones/style_a/128x128/white_07.png" id="13_5ii50"]
+[ext_resource type="Texture2D" uid="uid://cwu2og0mkse5n" path="res://assets/stones/style_a/128x128/white_08.png" id="14_o0gcl"]
+[ext_resource type="Texture2D" uid="uid://bp0ffp11fukre" path="res://assets/stones/style_a/128x128/white_09.png" id="15_v606t"]
+[ext_resource type="Texture2D" uid="uid://p43caw6ad8rj" path="res://assets/stones/style_a/128x128/white_10.png" id="16_cnwf8"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_i5bm8")
+black_textures = Array[Texture2D]([ExtResource("2_gpuve"), ExtResource("3_4o4bw"), ExtResource("4_jj8dd"), ExtResource("5_vnpbj")])
+white_textures = Array[Texture2D]([ExtResource("6_dvrlk"), ExtResource("7_62poc"), ExtResource("8_kp0le"), ExtResource("9_vjd4v"), ExtResource("10_up2ci"), ExtResource("11_gu6fy"), ExtResource("12_a1mu3"), ExtResource("13_5ii50"), ExtResource("14_o0gcl"), ExtResource("15_v606t"), ExtResource("16_cnwf8")])
+
+[node name="Stone" type="Sprite2D" parent="."]
+scale = Vector2(0.35, 0.35)
+texture = ExtResource("2_gpuve")
