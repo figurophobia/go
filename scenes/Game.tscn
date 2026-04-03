@@ -14,6 +14,17 @@ grow_vertical = 2
 script = ExtResource("1_qbsmt")
 stone_scene = ExtResource("2_cpr0p")
 
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -1.0
+offset_bottom = -1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.94902, 0.690196, 0.427451, 1)
+
 [node name="Board" type="TextureRect" parent="."]
 layout_mode = 1
 anchors_preset = 15
@@ -24,26 +35,80 @@ grow_vertical = 2
 texture = ExtResource("1_ibkli")
 stretch_mode = 5
 
-[node name="StartPoint" type="Control" parent="Board"]
-layout_mode = 1
-anchor_left = 0.253
-anchor_top = 0.062
-anchor_right = 0.253
-anchor_bottom = 0.062
-offset_left = 0.543976
-offset_top = -0.176003
-offset_right = 0.543976
-offset_bottom = -0.176003
+[node name="TopLeft" type="Control" parent="Board"]
+anchors_preset = 0
+offset_left = 291.93
+offset_top = 39.9219
+offset_right = 331.93
+offset_bottom = 79.9219
 
-[node name="NextPoint" type="Control" parent="Board"]
-layout_mode = 1
-anchor_left = 0.316
-anchor_top = 0.062
-anchor_right = 0.316
-anchor_bottom = 0.062
-offset_left = -0.0320129
-offset_top = -0.176003
-offset_right = -0.0320129
-offset_bottom = -0.176003
+[node name="BottomRight" type="Control" parent="Board"]
+anchors_preset = 0
+offset_left = 860.078
+offset_top = 608.062
+offset_right = 900.078
+offset_bottom = 648.062
 
 [node name="Stones" type="Sprite2D" parent="Board"]
+
+[node name="TurnLabel" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_right = 251.0
+offset_bottom = 646.0
+bbcode_enabled = true
+text = "Turno: Negras"
+
+[node name="CapturesLabel" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -306.0
+offset_top = -324.0
+offset_bottom = 325.0
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 26
+text = "Piedras capturadas:
+Negras comen:
+Blancas comen:
+"
+horizontal_alignment = 2
+
+[node name="PassButton" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -8.0
+offset_top = -8.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 32
+text = "PASS TURN"
+
+[node name="GameOverLabel" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -46.0
+offset_top = -11.5
+offset_right = 46.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 50
+text = "GAME OVER"
+horizontal_alignment = 1
+vertical_alignment = 1
