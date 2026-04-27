@@ -1,10 +1,10 @@
-[gd_scene load_steps=4 format=3 uid="uid://b3uvm7ngu5byn"]
+[gd_scene format=3 uid="uid://b3uvm7ngu5byn"]
 
 [ext_resource type="Texture2D" uid="uid://cwjwl1bb6cpc0" path="res://assets/board/go9x9.png" id="1_ibkli"]
 [ext_resource type="Script" uid="uid://dthxwpovwcc0y" path="res://scripts/game.gd" id="1_qbsmt"]
 [ext_resource type="PackedScene" uid="uid://dxmw1n4jo1j4o" path="res://scenes/Stone.tscn" id="2_cpr0p"]
 
-[node name="Control" type="Control"]
+[node name="Control" type="Control" unique_id=260572853]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -14,7 +14,7 @@ grow_vertical = 2
 script = ExtResource("1_qbsmt")
 stone_scene = ExtResource("2_cpr0p")
 
-[node name="ColorRect" type="ColorRect" parent="."]
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1197696767]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -25,7 +25,7 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.94902, 0.690196, 0.427451, 1)
 
-[node name="Board" type="TextureRect" parent="."]
+[node name="Board" type="TextureRect" parent="." unique_id=871091613]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -35,30 +35,30 @@ grow_vertical = 2
 texture = ExtResource("1_ibkli")
 stretch_mode = 5
 
-[node name="TopLeft" type="Control" parent="Board"]
+[node name="TopLeft" type="Control" parent="Board" unique_id=1349030167]
 anchors_preset = 0
 offset_left = 291.93
 offset_top = 39.9219
 offset_right = 331.93
 offset_bottom = 79.9219
 
-[node name="BottomRight" type="Control" parent="Board"]
+[node name="BottomRight" type="Control" parent="Board" unique_id=1311867894]
 anchors_preset = 0
 offset_left = 860.078
 offset_top = 608.062
 offset_right = 900.078
 offset_bottom = 648.062
 
-[node name="Stones" type="Sprite2D" parent="Board"]
+[node name="Stones" type="Sprite2D" parent="Board" unique_id=2112847293]
 
-[node name="TurnLabel" type="RichTextLabel" parent="."]
+[node name="TurnLabel" type="RichTextLabel" parent="." unique_id=88744582]
 layout_mode = 0
 offset_right = 251.0
 offset_bottom = 646.0
 bbcode_enabled = true
 text = "Turno: Negras"
 
-[node name="CapturesLabel" type="Label" parent="."]
+[node name="CapturesLabel" type="Label" parent="." unique_id=304837166]
 layout_mode = 1
 anchors_preset = 6
 anchor_left = 1.0
@@ -78,7 +78,7 @@ Blancas comen:
 "
 horizontal_alignment = 2
 
-[node name="PassButton" type="Button" parent="."]
+[node name="PassButton" type="Button" parent="." unique_id=859029733]
 layout_mode = 1
 anchors_preset = 3
 anchor_left = 1.0
@@ -93,22 +93,22 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 32
 text = "PASS TURN"
 
-[node name="GameOverLabel" type="Label" parent="."]
+[node name="GameOverLabel" type="RichTextLabel" parent="." unique_id=382858539]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -46.0
-offset_top = -11.5
-offset_right = 46.0
-offset_bottom = 11.5
+offset_left = -147.0
+offset_top = -35.0
+offset_right = 139.0
+offset_bottom = 34.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 50
+bbcode_enabled = true
 text = "GAME OVER"
+fit_content = true
 horizontal_alignment = 1
 vertical_alignment = 1

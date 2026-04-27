@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://dxmw1n4jo1j4o"]
+[gd_scene format=3 uid="uid://dxmw1n4jo1j4o"]
 
 [ext_resource type="Script" uid="uid://d1qnw3rke6qx0" path="res://scripts/stone.gd" id="1_i5bm8"]
 [ext_resource type="Texture2D" uid="uid://bi2uidr54rons" path="res://assets/stones/style_a/128x128/black_00.png" id="2_gpuve"]
@@ -17,11 +17,11 @@
 [ext_resource type="Texture2D" uid="uid://bp0ffp11fukre" path="res://assets/stones/style_a/128x128/white_09.png" id="15_v606t"]
 [ext_resource type="Texture2D" uid="uid://p43caw6ad8rj" path="res://assets/stones/style_a/128x128/white_10.png" id="16_cnwf8"]
 
-[node name="Node2D" type="Node2D"]
+[node name="Node2D" type="Node2D" unique_id=74828229]
 script = ExtResource("1_i5bm8")
 black_textures = Array[Texture2D]([ExtResource("2_gpuve"), ExtResource("3_4o4bw"), ExtResource("4_jj8dd"), ExtResource("5_vnpbj")])
 white_textures = Array[Texture2D]([ExtResource("6_dvrlk"), ExtResource("7_62poc"), ExtResource("8_kp0le"), ExtResource("9_vjd4v"), ExtResource("10_up2ci"), ExtResource("11_gu6fy"), ExtResource("12_a1mu3"), ExtResource("13_5ii50"), ExtResource("14_o0gcl"), ExtResource("15_v606t"), ExtResource("16_cnwf8")])
 
-[node name="Stone" type="Sprite2D" parent="."]
+[node name="Stone" type="Sprite2D" parent="." unique_id=1537360488]
 scale = Vector2(0.35, 0.35)
 texture = ExtResource("2_gpuve")
