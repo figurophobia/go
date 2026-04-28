@@ -18,3 +18,6 @@ func setup(black: bool):
 			sprite.texture = white_textures.pick_random()
 			
 	rotation_degrees = randf_range(0, 360)
+	
+	if GameConfig.board_size == 19:
+		scale = Vector2(0.75,0.75)

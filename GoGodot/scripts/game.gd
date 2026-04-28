@@ -11,7 +11,7 @@ extends Control
 @onready var pass_button = $PassButton
 @onready var game_over_label = $GameOverLabel
 
-var board_size = 9
+var board_size = GameConfig.board_size
 var is_black_turn = true
 var is_game_over = false
 var consecutive_passes = 0
@@ -45,6 +45,7 @@ func _ready():
 	cell_size_y = total_height / (board_size - 1)
 
 	tcp = Network.tcp
+	_send({"type": "config", "board_size": board_size})
 	set_process(true)
 	update_ui()
 

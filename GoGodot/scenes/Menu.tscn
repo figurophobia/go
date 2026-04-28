@@ -1,0 +1,55 @@
+[gd_scene format=3 uid="uid://dliebblvcea0o"]
+
+[ext_resource type="Script" uid="uid://2q7j4lpwymwi" path="res://scripts/main_menu.gd" id="1_xdvgc"]
+
+[node name="Control" type="Control" unique_id=1993983016]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_xdvgc")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1896139311]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -68.0
+offset_top = -42.5
+offset_right = 68.0
+offset_bottom = 42.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="VBoxContainer" unique_id=255160240]
+layout_mode = 2
+text = "GO MULTIPLAYER"
+horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="VBoxContainer" unique_id=142496357]
+layout_mode = 2
+text = "Board size:"
+horizontal_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer" unique_id=227577071]
+layout_mode = 2
+alignment = 1
+
+[node name="9x9" type="Button" parent="VBoxContainer/HBoxContainer" unique_id=2064515322]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+text = "9x9"
+
+[node name="19x19" type="Button" parent="VBoxContainer/HBoxContainer" unique_id=1478601362]
+layout_mode = 2
+text = "19x19"
+
+[node name="Play" type="Button" parent="VBoxContainer" unique_id=1443271389]
+layout_mode = 2
+text = "Play
+"

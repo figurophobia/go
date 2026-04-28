@@ -28,8 +28,14 @@ func _process(_delta):
 			status_label.text = "Conectado! Esperando al servidor..."
 			set_process(false)
 			Network.tcp = tcp
-			get_tree().change_scene_to_file("res://scenes/Game.tscn")
-
+			_go_to_game()
+			
 		StreamPeerTCP.STATUS_ERROR:
 			status_label.text = "Error de conexión"
 			set_process(false)
+
+func _go_to_game():
+	if GameConfig.board_size == 19:
+		get_tree().change_scene_to_file("res://scenes/Game19x19.tscn")
+	else:
+		get_tree().change_scene_to_file("res://scenes/Game.tscn")
