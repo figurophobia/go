@@ -29,7 +29,7 @@ theme_override_constants/separation = 20
 [node name="StatusLabel" type="Label" parent="VBoxContainer" unique_id=262684126]
 custom_minimum_size = Vector2(200, 40)
 layout_mode = 2
-text = "Introduce la IP del servidor"
+text = "Enter the server's IP"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -39,6 +39,6 @@ layout_mode = 2
 [node name="JoinButton" type="Button" parent="VBoxContainer" unique_id=854932183]
 custom_minimum_size = Vector2(200, 40)
 layout_mode = 2
-text = "Conectar"
+text = "Connect"
 
 [connection signal="pressed" from="VBoxContainer/JoinButton" to="." method="_on_join_pressed"]
