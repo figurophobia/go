@@ -28,7 +28,6 @@ var captures_black = 0
 var captures_white = 0
 var current_error: String = ""
 
-# --- NUEVO: referencia al TCP del Autoload ---
 var tcp: StreamPeerTCP
 
 func _ready():
@@ -45,12 +44,10 @@ func _ready():
 	cell_size_x = total_width / (board_size - 1)
 	cell_size_y = total_height / (board_size - 1)
 
-	# Coger el TCP del Autoload
 	tcp = Network.tcp
 	set_process(true)
 	update_ui()
 
-# --- NUEVO: recibir mensajes del servidor cada frame ---
 func _process(_delta):
 	if tcp == null: return
 	tcp.poll()
@@ -59,10 +56,8 @@ func _process(_delta):
 		_on_disconnected()
 		return
 
-	# Leer todos los mensajes disponibles
 	while tcp.get_available_bytes() > 0:
 		var line = tcp.get_utf8_string(tcp.get_available_bytes())
-		# Puede llegar más de un mensaje junto, separar por newline
 		for raw in line.split("\n", false):
 			if raw.strip_edges() != "":
 				_handle_message(JSON.parse_string(raw))
@@ -119,7 +114,6 @@ func _on_disconnected():
 	set_process(false)
 	update_ui()
 
-# --- Input: solo actúa si es tu turno ---
 func _on_board_gui_input(event):
 	if is_game_over: return
 
@@ -138,7 +132,6 @@ func _on_board_gui_input(event):
 
 		if grid_x >= 0 and grid_x < board_size and grid_y >= 0 and grid_y < board_size:
 			if not board_state.has(grid_pos):
-				# Enviar al servidor Python
 				_send({"type": "place_stone", "pos": [grid_x, grid_y]})
 			else:
 				current_error = "Invalid move: Cell occupied"
@@ -171,8 +164,6 @@ func _show_game_over(msg: Dictionary):
 		game_over_label.text += "[color=cyan]BLACK:[/color] [b]%s[/b] (Territory: %d, Captures: %d)\n" % [str(msg["total_black"]), msg["territory_black"], msg["captures_black"]]
 		game_over_label.text += "[color=orange]WHITE:[/color] [b]%s[/b] (Territory: %d, Captures: %d, Komi: 6.5)\n" % [str(msg["total_white"]), msg["territory_white"], msg["captures_white"]]
 		game_over_label.show()
-
-# --- Estas funciones NO cambian respecto al original ---
 
 func spawn_stone_visual(grid_pos: Vector2, is_black: bool):
 	var exact_pos = Vector2(

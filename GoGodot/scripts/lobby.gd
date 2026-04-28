@@ -27,7 +27,6 @@ func _process(_delta):
 		StreamPeerTCP.STATUS_CONNECTED:
 			status_label.text = "Conectado! Esperando al servidor..."
 			set_process(false)
-			# Pasar el TCP a la escena del juego
 			Network.tcp = tcp
 			get_tree().change_scene_to_file("res://scenes/Game.tscn")
 
