@@ -26,14 +26,12 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/separation = 20
 
-[node name="StatusLabel" type="Label" parent="VBoxContainer" unique_id=262684126]
-custom_minimum_size = Vector2(200, 40)
+[node name="GameIDLabel" type="Label" parent="VBoxContainer" unique_id=438249491]
 layout_mode = 2
-text = "Enter the server's IP"
+text = "GAME ID"
 horizontal_alignment = 1
-vertical_alignment = 1
 
-[node name="IPInput" type="LineEdit" parent="VBoxContainer" unique_id=1202914416]
+[node name="GameIDInput" type="LineEdit" parent="VBoxContainer" unique_id=24164577]
 layout_mode = 2
 
 [node name="JoinButton" type="Button" parent="VBoxContainer" unique_id=854932183]
@@ -41,4 +39,21 @@ custom_minimum_size = Vector2(200, 40)
 layout_mode = 2
 text = "Connect"
 
-[connection signal="pressed" from="VBoxContainer/JoinButton" to="." method="_on_join_pressed"]
+[node name="StatusLabel" type="Label" parent="VBoxContainer" unique_id=365857185]
+layout_mode = 2
+
+[node name="QuitButton" type="Button" parent="." unique_id=309230084]
+layout_mode = 0
+offset_left = 473.0
+offset_top = 434.0
+offset_right = 681.0
+offset_bottom = 474.0
+text = "EXIT"
+
+[node name="BackButton" type="Button" parent="." unique_id=86382947]
+layout_mode = 0
+offset_left = 473.0
+offset_top = 384.0
+offset_right = 681.0
+offset_bottom = 424.0
+text = "BACK"

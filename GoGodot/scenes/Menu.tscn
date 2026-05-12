@@ -53,3 +53,11 @@ text = "19x19"
 layout_mode = 2
 text = "Play
 "
+
+[node name="QuitButton" type="Button" parent="." unique_id=225806440]
+layout_mode = 0
+offset_left = 509.0
+offset_top = 392.0
+offset_right = 645.0
+offset_bottom = 425.0
+text = "EXIT"

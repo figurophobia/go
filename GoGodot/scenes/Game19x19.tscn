@@ -104,8 +104,10 @@ anchor_left = 1.0
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -8.0
-offset_top = -8.0
+offset_left = -193.0
+offset_top = -67.0
+offset_right = -13.0
+offset_bottom = -14.0
 grow_horizontal = 0
 grow_vertical = 0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
@@ -131,3 +133,26 @@ text = "GAME OVER"
 fit_content = true
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="EXIT" type="Button" parent="." unique_id=703131368]
+layout_mode = 0
+offset_left = 9.0
+offset_top = 582.0
+offset_right = 201.0
+offset_bottom = 635.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 29
+text = "DISCONNECT"
+
+[node name="QuitButton" type="Button" parent="." unique_id=831719711]
+layout_mode = 0
+offset_left = 9.0
+offset_top = 508.0
+offset_right = 201.0
+offset_bottom = 561.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 32
+text = "EXIT"
+
+[connection signal="pressed" from="EXIT" to="." method="_on_exit_pressed"]
+[connection signal="pressed" from="QuitButton" to="." method="_on_quit_button_pressed"]
